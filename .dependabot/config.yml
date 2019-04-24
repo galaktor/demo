@@ -8,6 +8,9 @@ update_configs:
   - package_manager: "go:modules"
     directory: "/golang"
     update_schedule: "daily"
+    allowed_updates:
+    - match:
+        update_type: "all"
 
   - package_manager: "javascript"
     directory: "/javascript"
@@ -16,3 +19,6 @@ update_configs:
   - package_manager: "docker"
     directory: "/golang"
     update_schedule: "daily"
+    allowed_updates:
+    - match:
+        update_type: "all"
