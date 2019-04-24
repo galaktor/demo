@@ -11,5 +11,8 @@ DEPENDENCIES
   business (~> 1.0.0)
   uk_phone_numbers (~> 0.1.0)
 
+RUBY VERSION
+   ruby 2.5.3p105
+
 BUNDLED WITH
    1.17.3
