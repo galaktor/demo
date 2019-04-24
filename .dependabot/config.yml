@@ -1,0 +1,14 @@
+version: 1
+
+update_configs:
+  - package_manager: "ruby:bundler"
+    directory: "/ruby"
+    update_schedule: "live"
+
+  - package_manager: "go:modules"
+    directory: "/golang"
+    update_schedule: "daily"
+
+  - package_manager: "javascript"
+    directory: "/javascript"
+    update_schedule: "live"
