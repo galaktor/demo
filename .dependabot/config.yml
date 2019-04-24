@@ -14,5 +14,5 @@ update_configs:
     update_schedule: "live"
 
   - package_manager: "docker"
-    directory: "/"
+    directory: "/golang"
     update_schedule: "daily"
