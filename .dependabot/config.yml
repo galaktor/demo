@@ -12,3 +12,7 @@ update_configs:
   - package_manager: "javascript"
     directory: "/javascript"
     update_schedule: "live"
+
+  - package_manager: "docker"
+    directory: "/"
+    update_schedule: "daily"
