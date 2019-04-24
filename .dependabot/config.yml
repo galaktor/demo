@@ -4,6 +4,9 @@ update_configs:
   - package_manager: "ruby:bundler"
     directory: "/ruby"
     update_schedule: "live"
+    allowed_updates:
+    - match:
+        update_type: "all"
 
   - package_manager: "go:modules"
     directory: "/golang"
@@ -15,6 +18,9 @@ update_configs:
   - package_manager: "javascript"
     directory: "/javascript"
     update_schedule: "live"
+    allowed_updates:
+    - match:
+        update_type: "all"
 
   - package_manager: "docker"
     directory: "/golang"
