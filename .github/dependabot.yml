@@ -1,0 +1,40 @@
+version: 2
+registries:
+  docker-registry-registry-hub-docker-com:
+    type: docker-registry
+    url: https://registry.hub.docker.com
+    username: intercomci
+    password: "${{secrets.DOCKER_REGISTRY_REGISTRY_HUB_DOCKER_COM_PASSWORD}}"
+
+updates:
+- package-ecosystem: bundler
+  directory: "/ruby"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: business
+    versions:
+    - 2.1.0
+    - 2.2.0
+- package-ecosystem: npm
+  directory: "/javascript"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+- package-ecosystem: gomod
+  directory: "/golang"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+- package-ecosystem: docker
+  directory: "/golang"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  registries:
+  - docker-registry-registry-hub-docker-com
